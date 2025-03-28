@@ -43,8 +43,9 @@
             return this.packets;
         }
 
-        private void device_OnPacketArrival(object sender, PacketCapture e)
+        private string device_OnPacketArrival(object sender, PacketCapture e)
         {
+            IsakmpPacket isakmpPacket = new();
             var rawPacket = e.GetPacket();
 
             var packet = Packet.ParsePacket(rawPacket.LinkLayerType, rawPacket.Data);
@@ -55,11 +56,10 @@
                 this.packets.Add(ethernetPacket);
                 PortAnalize(ethernetPacket);
 
-                //Пример инфы, которую можно дёргать из пакет
-
 
                 packetIndex++;
             }
+            return (isakmpPacket); // Ошибка компиляции
         }
 
         private void PortAnalize(EthernetPacket ethernetPacket)

@@ -1,16 +1,20 @@
-﻿namespace IsakmpAnalisator.Handling
+﻿/*namespace IsakmpAnalisator.Handling
 {
     using IsakmpAnalisator.Handling;
     using System.Text.Json;
 
+public class IsakmpDetector
+    {
+        private List<IsakmpPacket> isakmpPackets = new();
+        // private bool IsItIsamp()
+        // {
 
-    private List<IsakmpPacket> IsakmpPackets = new();
-    // private bool IsItIsamp()
-    // {
+        // }
+    }
 
-    // }
 
 
 
 
 }
+*/
